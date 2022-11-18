@@ -42,16 +42,16 @@ body {
 
 .header {
   grid-column: full-start /full-end;
-  background-color: #473791;
-  color: #fff; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #473791; }
   .header--center {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    top: 50%;
-    left: 50%;
     width: 50vw; }
     .header--center__h1 {
       color: #fff;
@@ -108,11 +108,21 @@ body {
     font-size: 1.3rem;
     color: #211E1B; }
 
+.sticky {
+  position: fixed;
+  background-color: rgba(71, 55, 145, 0.7);
+  color: #fff;
+  z-index: 10;
+  width: 100vw; }
+
 .section {
   grid-column: center-start /center-end;
   display: grid;
   grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
   position: relative; }
+  .section--hidden {
+    opacity: 0;
+    transform: translateY(8rem); }
   .section--left {
     grid-column: col-start 1 / col-end 2;
     position: absolute;

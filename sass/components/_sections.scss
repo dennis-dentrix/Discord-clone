@@ -4,6 +4,10 @@
     grid-template-columns: repeat(4, [col-start]1fr[col-end]);
     position: relative;
     // padding-top: 5rem;
+    &--hidden {
+        opacity: 0;
+        transform: translateY(8rem);
+    }
     &--left {
         grid-column: col-start 1 / col-end 2;
         position: absolute;
