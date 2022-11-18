@@ -1,0 +1,257 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  overflow-x: hidden; }
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 50rem) minmax(min-content, 70rem) 45rem;
+  grid-template-columns: [full-start] 0.5fr [center-start] repeat(8, minmax(min-content, 12rem)) [center-end] 0.5fr [full-end]; }
+
+.icon {
+  width: 2.2rem;
+  height: 2.2rem; }
+
+.btn--small {
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 0.7rem 0.9rem; }
+
+.btn--large {
+  border: none;
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem; }
+  .btn--large__white {
+    background-color: #fff; }
+  .btn--large__black {
+    background-color: #211E1B; }
+
+.header {
+  grid-column: full-start /full-end;
+  background-color: #473791;
+  color: #fff; }
+  .header--center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width: 50vw; }
+    .header--center__h1 {
+      color: #fff;
+      font-size: 5rem;
+      font-weight: 800; }
+    .header--center__para {
+      color: #fff;
+      font-size: 1.5rem; }
+    .header--center__btn {
+      padding-top: 3rem;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1.7rem; }
+    .header--center__icon {
+      width: 2rem;
+      height: 2rem; }
+    .header--center__btnWhite {
+      text-decoration: none;
+      color: #211E1B; }
+    .header--center__btnBlack {
+      color: #fff;
+      text-decoration: none; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4.3rem; }
+  .nav--logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem; }
+    .nav--logo__text {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 600; }
+    .nav--logo__icon {
+      fill: #fff; }
+  .nav--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem; }
+  .nav--list {
+    list-style: none; }
+  .nav--link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500; }
+  .nav--btn {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #211E1B; }
+
+.section {
+  grid-column: center-start /center-end;
+  display: grid;
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+  position: relative; }
+  .section--left {
+    grid-column: col-start 1 / col-end 2;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 10%); }
+  .section--right {
+    grid-column: col-start 3 / col-end 4;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 10%); }
+    .section--right__text {
+      padding-top: 3rem; }
+  .section--img {
+    width: 50vw;
+    height: 100%; }
+  .section--heading1 {
+    font-size: 4rem;
+    margin-bottom: 2rem; }
+  .section--paragraph {
+    font-size: 1.3rem;
+    font-weight: 400; }
+  .section--full {
+    grid-column: center-start / center-end;
+    padding: 6rem 2rem;
+    background-color: #ffffff8f; }
+    .section--full__center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      text-align: center; }
+  .section--btn {
+    background-color: #6CA4D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; }
+    .section--btn__icon {
+      fill: #fff;
+      width: 1.8rem;
+      height: 1.8rem; }
+    .section--btn__link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #fff; }
+
+.footer {
+  grid-column: full-start /full-end;
+  background-color: #111111a4;
+  color: #141313;
+  padding: 6rem 3.3rem; }
+  .footer--icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    fill: #fff;
+    margin-right: 0.6rem; }
+  .footer--socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem; }
+  .footer--nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 5rem;
+    gap: 1rem; }
+    .footer--nav__title {
+      color: #6CA4D4;
+      font-size: 1.4rem; }
+    .footer--nav__items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem; }
+    .footer--nav__list {
+      list-style: none; }
+    .footer--nav__link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: all 0.2s; }
+      .footer--nav__link:hover, .footer--nav__link:active {
+        border-bottom: 1px solid #fff; }
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #6CA4D4;
+  padding-bottom: 4.4rem;
+  padding-right: 3rem; }
+  .top--left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 12rem; }
+    .top--left__heading {
+      color: #473791;
+      font-size: 1.8rem; }
+    .top--left__language {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem; }
+    .top--left__text {
+      color: #fff;
+      font-size: 1.3rem;
+      font-weight: 300; }
+  .top--right {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6rem; }
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem; }
+  .bottom--logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem; }
+    .bottom--logo__icon {
+      fill: #fff;
+      width: 2.3rem;
+      height: 2.3rem; }
+    .bottom--logo__name {
+      font-size: 1.7rem;
+      color: #fff; }
+  .bottom--login {
+    background-color: #6CA4D4; }
+    .bottom--login__link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.4rem; }

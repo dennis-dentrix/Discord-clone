@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, 50rem) minmax(min-content, 70rem) 45rem;
+    grid-template-columns: [full-start] 0.5fr [center-start] repeat(8, minmax(min-content, 12rem)) [center-end] 0.5fr [full-end];
+}
+
+.icon {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.btn {
+    &--small {
+        border: none;
+        border-radius: 16px;
+        background-color: #fff;
+        padding: 0.7rem 0.9rem;
+    }
+    &--large {
+        border: none;
+        padding: 1rem 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        &__white {
+            background-color: $color-text;
+        }
+        &__black {
+            background-color: $color--black;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "discord",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch:sass": "node-sass --watch sass/main.scss css/style.css"
+    },
+    "author": "denis-dentrix",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^8.0.0"
+    }
+}
